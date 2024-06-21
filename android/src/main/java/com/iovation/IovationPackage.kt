@@ -1,4 +1,4 @@
-package com.turbomodule
+package com.reactnativeiovation
 
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule
@@ -7,10 +7,10 @@ import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import java.util.HashMap
 
-class TurboModulePackage : TurboReactPackage() {
+class IovationPackage : TurboReactPackage() {
   override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-    return if (name == TurboModuleModule.NAME) {
-      TurboModuleModule(reactContext)
+    return if (name == IovationModule.NAME) {
+      IovationModule(reactContext)
     } else {
       null
     }
@@ -19,14 +19,14 @@ class TurboModulePackage : TurboReactPackage() {
   override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
     return ReactModuleInfoProvider {
       val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
-      moduleInfos[TurboModuleModule.NAME] = ReactModuleInfo(
-        TurboModuleModule.NAME,
-        TurboModuleModule.NAME,
+      moduleInfos[IovationModule.NAME] = ReactModuleInfo(
+        IovationModule.NAME,
+        IovationModule.NAME,
         false,  // canOverrideExistingModule
         false,  // needsEagerInit
         true,  // hasConstants
         false,  // isCxxModule
-        true // isTurboModule
+        true // isIovation
       )
       moduleInfos
     }

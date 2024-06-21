@@ -1,4 +1,4 @@
-package com.turbomodule
+package com.reactnativeiovation
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -7,7 +7,7 @@ import com.facebook.react.bridge.Promise
 import com.iovation.mobile.android.FraudForceConfiguration
 import com.iovation.mobile.android.FraudForceManager
 
-class TurboModuleModule(reactContext: ReactApplicationContext) :
+class IovationModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
   override fun getName(): String {
@@ -38,7 +38,7 @@ class TurboModuleModule(reactContext: ReactApplicationContext) :
   }
 
   companion object {
-    const val NAME = "TurboModule"
+    const val NAME = "Iovation"
   }
 }
 
