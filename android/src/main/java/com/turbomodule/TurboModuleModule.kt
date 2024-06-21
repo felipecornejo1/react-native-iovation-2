@@ -15,8 +15,8 @@ class TurboModuleModule(reactContext: ReactApplicationContext) :
   }
 
   @ReactMethod
-  fun multiply(a: Double, b: Double, promise: Promise) {
-    promise.resolve(a * b)
+  fun multiply(a: Double, b: Double): Double {
+    return a * b
   }
 
   val configuration = FraudForceConfiguration.Builder()
@@ -32,9 +32,9 @@ class TurboModuleModule(reactContext: ReactApplicationContext) :
 	}
 
   @ReactMethod
-  fun getBlackbox(a: Double, b: Double, promise: Promise) {
+  fun getBlackbox(a: Double, b: Double): String {
     val blackbox = FraudForceManager.getBlackbox(context)
-    promise.resolve(blackbox)
+    return blackbox
   }
 
   companion object {
